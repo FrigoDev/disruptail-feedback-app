@@ -1,0 +1,35 @@
+module.exports = {
+  root: true,
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 2022,
+    sourceType: "module",
+    ecmaFeatures: { jsx: true },
+    project: "./tsconfig.json",
+  },
+  plugins: [
+    "@typescript-eslint",
+    "simple-import-sort",
+  ],
+  extends: [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+  ],
+  rules: {
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "react/react-in-jsx-scope": "off",
+    "no-console": ["warn", { allow: ["warn", "error"] }],
+    "prefer-const": "warn",
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+    quotes: ["warn", "double", { avoidEscape: true }],
+    semi: ["warn", "always"],
+    indent: ["warn", 2],
+    "comma-dangle": ["warn", "always-multiline"],
+    "object-curly-spacing": ["warn", "always"],
+  },
+};
