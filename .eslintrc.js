@@ -7,10 +7,7 @@ module.exports = {
     ecmaFeatures: { jsx: true },
     project: "./tsconfig.json",
   },
-  plugins: [
-    "@typescript-eslint",
-    "simple-import-sort",
-  ],
+  plugins: ["@typescript-eslint", "simple-import-sort"],
   extends: [
     "next/core-web-vitals",
     "plugin:react/recommended",
