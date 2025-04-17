@@ -38,7 +38,7 @@ export default function DashboardShell({ children }: { children: React.ReactNode
           <DialogDescription className="sr-only">
             Use this menu to navigate through the admin dashboard sections.
           </DialogDescription>
-          <DialogTrigger asChild>
+          <DialogTrigger asChild aria-label="Menu button">
             <button>
               <MenuIcon className="w-6 h-6" />
             </button>

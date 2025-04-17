@@ -90,7 +90,7 @@ export default function FeedbackListPage() {
             defaultValue="all"
             onValueChange={(val) => setSelectedRating(val === "all" ? null : Number(val))}
           >
-            <SelectTrigger className="w-48">
+            <SelectTrigger className="w-48" aria-label="Rating select">
               <SelectValue placeholder="All Ratings" />
             </SelectTrigger>
             <SelectContent>

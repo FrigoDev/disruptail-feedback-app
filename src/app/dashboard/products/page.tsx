@@ -66,7 +66,7 @@ export default function ProductsPage() {
             defaultValue="all"
             onValueChange={(val) => setSelectedCategory(val === "all" ? null : val)}
           >
-            <SelectTrigger className="w-48">
+            <SelectTrigger className="w-48" aria-label="Category Filter">
               <SelectValue placeholder="All Categories" />
             </SelectTrigger>
             <SelectContent>
