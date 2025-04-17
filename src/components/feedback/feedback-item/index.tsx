@@ -60,15 +60,15 @@ export default function FeedbackItem({ feedback, session, onDelete, onEdit }: Pr
 
   return (
     <div className="space-y-2 border border-border rounded-md p-4 mt-6">
-      <div className="flex justify-between items-start">
-        <div>
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+        <div className="flex-1">
           <p className="font-medium text-foreground">{feedback.user.email}</p>
           <p className="text-foreground mt-1">{feedback.comment}</p>
         </div>
-        <div className="text-right space-y-1">
-          <p className="text-yellow-600">{feedback.rating.toFixed(1)} ⭐</p>
+        <div className="flex sm:flex-col items-end sm:items-end gap-1 sm:gap-2 text-sm text-right">
+          <p className="text-yellow-600 font-semibold">{feedback.rating.toFixed(1)} ⭐</p>
           {(isOwner || isAdmin) && (
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap justify-end">
               {isOwner && (
                 <button
                   onClick={() => setIsEditing(true)}
@@ -87,6 +87,7 @@ export default function FeedbackItem({ feedback, session, onDelete, onEdit }: Pr
           )}
         </div>
       </div>
+
       <p className="text-sm text-muted-foreground text-right">
         {new Date(feedback.updatedAt).toLocaleDateString()}
       </p>
