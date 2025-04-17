@@ -38,8 +38,6 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"form">)
     } else {
       router.push(res?.url || "/dashboard");
     }
-
-    console.log(res);
   };
 
   return (
@@ -64,9 +62,6 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"form">)
         <div className="grid gap-3">
           <div className="flex items-center">
             <Label htmlFor="password">Password</Label>
-            <a href="#" className="ml-auto text-sm underline-offset-4 hover:underline">
-              Forgot your password?
-            </a>
           </div>
           <Input
             id="password"
@@ -88,7 +83,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"form">)
       </div>
       <div className="text-center text-sm">
         Don&apos;t have an account?{" "}
-        <a href="#" className="underline underline-offset-4">
+        <a href="/register" className="underline underline-offset-4">
           Sign up
         </a>
       </div>
